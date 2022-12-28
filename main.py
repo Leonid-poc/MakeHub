@@ -10,4 +10,4 @@ def index():
 
 if __name__ == '__main__':
     app.run('localhost', 5000, debug=True)
-kl;
+# Тест для Ранила с большой буквы
