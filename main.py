@@ -3,7 +3,7 @@ from flask_login import current_user, login_user, logout_user
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='client/public')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pizza.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
