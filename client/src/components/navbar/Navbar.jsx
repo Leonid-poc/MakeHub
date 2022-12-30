@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className='main_nav'>
       <div className="icon">
-          <h1 style={{color: "white"}}>ЧЛЕН</h1>
+          <h1>ЧЛЕН</h1>
       </div>
       <div className={classes.NavBar}>
         <MobileNavigation />
