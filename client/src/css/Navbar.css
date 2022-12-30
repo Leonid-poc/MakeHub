@@ -12,6 +12,8 @@
 
 .icon{
     width: 50%;
+    display: flex;
+    padding-left: 50px;
 }
 .menu{
     width: 50%;
