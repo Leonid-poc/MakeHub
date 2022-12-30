@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  --index: calc(1vw + 1vh)
+}
+
 body {
   background-image: url(./assets/background.jpeg);
   background-size: cover;
@@ -11,4 +15,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Raleway", sans-serif;
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url(./assets/fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Merienda;
+  src: url(./assets/fonts/Merienda-Medium.ttf);
 }
