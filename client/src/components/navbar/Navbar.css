@@ -28,9 +28,11 @@
     font-weight: 500;
     transition: .4s;
 }
+
 .link:hover{
     color: #fac564;
 }
+
 .link:focus{
     color: #fac564;
 }
