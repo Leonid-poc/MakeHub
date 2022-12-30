@@ -1,18 +1,19 @@
-a{
-    font-family: "Roboto", sans-serif;
+.content a, p{
     text-decoration: none;
     color: rgba(255, 255, 255);
     font-weight: 400;
+    font-size: calc(var(--index)*0.6);
 }
 
-p{
-    color: rgba(255, 255, 255);
+.container_info span{
+    color: rgba(255, 255, 255, .4);
     font-weight: 300;
+    font-size: calc(var(--index)*0.5);
 }
 
 .info{
     width: 100%;
-    height: 100px;
+    height: 140px;
     display: flex;
     flex-direction: row;
 }
@@ -21,7 +22,7 @@ p{
     font-family: "Work Sans", sans-serif;
     width: 70%;
     height: 100%;
-    background-color: #181818;
+    background-color: #0a0a0a;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -30,18 +31,16 @@ p{
 }
 
 .container{
-    width: 220px;
-    height: 80px;
+    width: 33%;
+    height: 40px;
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    justify-content: center;
+    text-align: flex-start;
     flex-direction: row;
-    align-items: center;
-    margin: 0 40px;
 }
+
 .container_logo{
     height: 100%;
-    padding-top: 15px;
 }
 
 .container_info{
@@ -55,17 +54,15 @@ p{
 .content{
     display: flex;
     justify-content: center;
-    text-align: center;
-    align-items: center;
+    text-align: flex-start;
+    align-items: flex-start;
 }
 
 .content_logo{
     margin-right: 10px;
 }
 
-.content_info{
-    color: rgba(255, 255, 255, .4);
-}
+
 
 .right_content{
     width: 30%;
@@ -81,4 +78,46 @@ p{
 .social_logo{
     margin: 0 10px;
     cursor: pointer;
+}
+
+@media(max-width: 1160px) {
+    .info{
+        flex-direction: column;
+    }
+    .left_content{
+        width: 100%;
+        height: 65%;
+        padding-right: 0;
+    }
+    .right_content{
+        width: 100%;
+        height: 35%;
+    }
+   .content a, p{
+        font-size: calc(var(--index)*0.9);
+    }
+    .container_info span{
+        font-size: calc(var(--index)*0.75);
+    }
+    container{
+        width: 33%;
+    }
+}
+
+@media(max-width: 855px) {
+    .content a, p{
+        font-size: calc(var(--index)*0.7);
+    }
+    .container_info span{
+        font-size: calc(var(--index)*0.55);
+    }
+}
+
+@media(max-width: 440px) {
+    .content a, p{
+        font-size: calc(var(--index)*0.65);
+    }
+    .container_info span{
+        font-size: calc(var(--index)*0.5);
+    }
 }

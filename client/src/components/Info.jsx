@@ -15,7 +15,7 @@ const Info = () => {
             <div className="content">
               <a href="tel:8987116415">8 987 116-94-15</a>
             </div>
-            <span className='content_info'>Lorem ipsum dolor sit.</span>
+            <span>Lorem ipsum dolor.</span>
           </div>
         </div>
         <div className="container">
@@ -26,7 +26,7 @@ const Info = () => {
             <div className="content">
               <p>198 West 21th Street</p>
             </div>
-            <span className='content_info'>Lorem ipsum dolor sit.</span>
+            <span>Lorem ipsum dolor.</span>
           </div>
         </div>
         <div className="container">
@@ -37,7 +37,7 @@ const Info = () => {
             <div className="content">
               <p>Open Monday-Friday</p>
             </div>
-            <span className='content_info'>Lorem ipsum dolor sit.</span>
+            <span>8:00am - 9:00pm</span>
           </div>
         </div>
       </div>
