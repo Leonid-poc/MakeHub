@@ -26,3 +26,13 @@ body {
   font-family: Merienda;
   src: url(./assets/fonts/Merienda-Medium.ttf);
 }
+
+@font-face {
+  font-family: Work Sans;
+  src: url(./assets/fonts/WorkSans-Light.ttf);
+}
+
+@font-face {
+  font-family: Work Sans;
+  src: url(./assets/fonts/WorkSans-Regular.ttf);
+}
