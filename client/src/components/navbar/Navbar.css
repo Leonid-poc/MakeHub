@@ -2,9 +2,8 @@
     position: fixed;
     height: 100px;
     width: 100%;
-    opacity: .9;
     z-index: 999;
-    background-color: #121618;
+    background-color: #0a0a0a;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
