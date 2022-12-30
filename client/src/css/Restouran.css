@@ -1,0 +1,62 @@
+.restouran{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.restouran_left{
+    width: 50%;
+    height: 100%;
+    background-image: url('../assets/welcome.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.restouran_right{
+    width: 50%;
+    height: 100%;
+    padding: 80px;
+}
+
+.restouran_right_top_info {
+    width: 100%;
+    height: 30%;
+    font-family: "Merienda", sans-serif;
+    color: #fff;
+    font-size: calc(var(--index)*0.9);
+}
+
+.restouran_right_top_info h1 span {
+    color: #fac564;
+    font-size: calc(var(--index)*1.3);
+}
+
+.restouran_right_bottom_info{
+    margin-top: 30px;
+    width: 100%;
+    height: 70%;
+}
+
+.restouran_right_bottom_info p{
+    font-size: calc(var(--index)*0.7);
+    color: rgba(255, 255, 255, .5);
+}
+
+@media(max-width: 765px) {
+    .restouran{
+        flex-direction: column;
+    }
+    .restouran_left{
+        width: 100%;
+        height: 50%;
+    }
+    .restouran_right{
+        width: 100%;
+        height: 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
