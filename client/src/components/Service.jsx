@@ -3,6 +3,7 @@ import '../css/Service.css';
 import logo1 from '../assets/logo/food.jpeg';
 import logo2 from '../assets/logo/deliver.jpg';
 import logo3 from '../assets/logo/pizzas.jpeg';
+import Fade from 'react-reveal/Fade';
 
 const Service = () => {
     const information = [
@@ -17,13 +18,19 @@ const Service = () => {
         return (
             <div className="service_content_container">
                 <div className="service_container_top">
-                    <div className="image">
-                        <img className="img" src={data.logo}></img>
-                    </div>
+                    <Fade bottom>
+                        <div className="image">
+                            <img className="img" src={data.logo}></img>
+                        </div>
+                    </Fade>
                 </div>
                 <div className="service_container_bottom">
-                    <h1>{data.title}</h1>
-                    <p>{data.info}</p>
+                    <Fade bottom>
+                        <h1>{data.title}</h1>
+                    </Fade>
+                    <Fade bottom>
+                        <p>{data.info}</p>
+                    </Fade>
                 </div>
             </div>
         )
@@ -37,8 +44,12 @@ const Service = () => {
         <section className='service'>
             <div className="service_content">
                 <div className="service_content_top">
-                    <h1>Our Service</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aperiam unde mollitia, non facere ab? Perferendis quam unde cupiditate quidem.</p>
+                    <Fade bottom>
+                        <h1>Our Service</h1>
+                    </Fade>
+                    <Fade bottom>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aperiam unde mollitia, non facere ab? Perferendis quam unde cupiditate quidem.</p>
+                    </Fade>
                 </div>
                 <div className="service_content_bottom">
                 {itemsList}

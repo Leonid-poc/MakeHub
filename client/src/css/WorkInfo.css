@@ -1,0 +1,11 @@
+.workInfo{
+    height: 40vh;
+    background-image: url(../assets/people.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
