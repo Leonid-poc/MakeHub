@@ -36,3 +36,14 @@ body {
   font-family: Work Sans;
   src: url(./assets/fonts/WorkSans-Regular.ttf);
 }
+
+._animate_obj{
+  transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+._animation_active{
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all .8s ease 0s;
+}

@@ -2,12 +2,16 @@ import React from 'react';
 import { SlSocialInstagram, SlSocialFacebook, SlSocialTwitter } from 'react-icons/sl';
 import { AiOutlineAim, AiOutlineClockCircle, AiOutlinePhone } from 'react-icons/ai';
 import '../css/Info.css';
+import animItems from '../animate';
+
 
 const Info = () => {
+  animItems();
+
   return (
     <section className='info'>
       <div className="left_content">
-        <div className="container">
+        <div className="container _animate_obj">
           <div className="container_logo">
             <AiOutlinePhone className ='content_logo' size='25px' color='#fac564'/>
           </div>
@@ -18,7 +22,7 @@ const Info = () => {
             <span>Lorem ipsum dolor.</span>
           </div>
         </div>
-        <div className="container">
+        <div className="container _animate_obj">
           <div className="container_logo">
             <AiOutlineAim className ='content_logo' size='25px' color='#fac564'/>
           </div>
@@ -29,7 +33,7 @@ const Info = () => {
             <span>Lorem ipsum dolor.</span>
           </div>
         </div>
-        <div className="container">
+        <div className="container _animate_obj">
           <div className="container_logo">
             <AiOutlineClockCircle className ='content_logo' size='25px' color='#fac564'/>
           </div>
@@ -42,7 +46,7 @@ const Info = () => {
         </div>
       </div>
       <div className="right_content">
-        <div className="social">
+        <div className="social _animate_obj">
           <SlSocialInstagram 
             className='social_logo' 
             size='30px' 
