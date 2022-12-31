@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/WorkInfo.css';
 import { GiCook, GiPizzaSlice } from 'react-icons/gi';
 import { FaAward } from 'react-icons/fa';
 import { IoMdPeople } from 'react-icons/io';
-
+import Fade from 'react-reveal/Fade';
 
 const WorkInfo = () => {
   const info = [
@@ -17,11 +17,10 @@ const WorkInfo = () => {
 
   const Icon = ({data}) => {
     return (
+      
       <div className="icon_block">
         <div className="icon_image">
-          {/* <div className='icon_image_layout'> */}
             <data.logo className='icon_image_img'/>
-          {/* </div> */}
         </div>
         <div className="icon_info">
           <h2>{data.number}</h2>
@@ -35,7 +34,7 @@ const WorkInfo = () => {
     items.push(<Icon data={el}/>);
   });
 
-  const [scroll, setScroll] = React.useState(0);
+  const [scroll, setScroll] = useState(0); 
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -46,11 +45,13 @@ const WorkInfo = () => {
   }, []);
   
   return (
-    <section className='workInfo' style={{backgroundPosition : `50% ${window.scrollY*0.65}px`}}>
+    <section className='workInfo' style={{backgroundPosition : `50% ${window.scrollY*0.9}px`}}>
         <div className="overlay">
-            <div className="workInfo_content" >
+          <div className="workInfo_content" >
+            <Fade bottom>
               {items}
-            </div>
+            </Fade>
+          </div>
         </div>
     </section>
   )

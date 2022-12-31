@@ -1,7 +1,7 @@
 .workInfo{
     height: 40vh;
-    background-image: url(../assets/people.jpg);
-    
+    background-image: url(../assets/1.jpg);
+    background-size: cover;
 }
 .overlay{
     height: 100%;
@@ -16,6 +16,7 @@
     width: 90%;
     height: 90%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -25,12 +26,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: #fff;
     text-align: center;
-    width: 100%;
-    height: 50%; 
+    width: 200px;
+    height: 200px;
 }
 
 .icon_image{
@@ -40,10 +41,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
-.icon_image::before {
+.icon_image::after {
     content: '';
     position: absolute;
     border: 1px solid #fac564;
@@ -54,24 +55,57 @@
     transition: all 0.4s ease;
 }
 
-.icom_image:hover::before{
+.icon_image:hover::after{
     background-color: #fac564;
-    transform: rotate(45deg);
+    transform: rotate(135deg);
     width: 100%;
     height: 100%;
-    border: none
+    border: none;
+}
+
+.icon_image:hover{
+    color: #000;
 }
 
 .icon_image_img{
+    position: absolute;
     height: 100%;
     width: 100%;
+    padding: 20px;
     color: #fac564;
+    z-index: 33;
 }
 
-.icon_image_img::hover{
+.icon_image_img:hover{
     color: #000;
 }
 
 .icon_info{
     font-family: "Work Sans", sans-serif;
+}
+.icon_info h2{
+    color: #fac564;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 900px){
+    .workInfo{
+        height: 50vh;
+    }
+    .icon_block{
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 454px){
+    .workInfo{
+        height: 100vh;
+    }
+    .icon_block{
+        justify-content: center;
+    }
+    .icon_image{
+        margin: 20px;
+    }
 }
