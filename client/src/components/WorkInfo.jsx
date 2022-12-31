@@ -42,8 +42,6 @@ const WorkInfo = () => {
     )
   }
 
-  
-
   info.forEach((el) => {
     items.push(<Icon data={el}/>);
   });
