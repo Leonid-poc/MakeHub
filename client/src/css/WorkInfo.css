@@ -1,11 +1,77 @@
 .workInfo{
     height: 40vh;
     background-image: url(../assets/people.jpg);
-    background-size: cover;
-    background-position: 50%;
+    
 }
 .overlay{
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workInfo_content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 50%; 
+}
+
+.icon_image{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.icon_image::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #fac564;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.4s ease;
+}
+
+.icom_image:hover::before{
+    background-color: #fac564;
+    transform: rotate(45deg);
+    width: 100%;
+    height: 100%;
+    border: none
+}
+
+.icon_image_img{
+    height: 100%;
+    width: 100%;
+    color: #fac564;
+}
+
+.icon_image_img::hover{
+    color: #000;
+}
+
+.icon_info{
+    font-family: "Work Sans", sans-serif;
 }
