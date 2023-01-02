@@ -16,14 +16,16 @@ const Contact = () => {
           </div>    
         </Fade>
         <div className="contact_form">
-          <Fade bottom><input type="text" placeholder='First Name'/></Fade>
-          <Fade bottom><input type="text" placeholder='Second Name'/></Fade>
-          <Fade bottom><input type="tel" placeholder='Phone Number'/></Fade>
-          <Fade bottom><input type="text" placeholder='Message'/></Fade>
+          <Fade right><input type="text" placeholder='First Name'/></Fade>
+          <Fade right><input type="text" placeholder='Second Name'/></Fade>
+          <Fade right><input type="tel" placeholder='Phone Number'/></Fade>
+          <Fade right><input type="text" placeholder='Message'/></Fade>
         </div> 
-        <div className='contact_button'>
-          <a href="#">Send</a>
-        </div>
+        <Fade bottom>
+          <div className='contact_button'>
+            <a href="#">Send</a>
+          </div>
+        </Fade>
       </div>
     </section>
   )

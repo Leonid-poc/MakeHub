@@ -1,0 +1,20 @@
+.footer{
+    height: 80vh;
+    background: #101315;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_container{
+    width: 90%;
+    height: 70%;
+}
+
+.footer_container_bottom p{
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: calc(var(--index)*0.7); 
+    letter-spacing: 1.9px;
+}

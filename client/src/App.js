@@ -6,6 +6,7 @@ import Restouran from './components/Restouran';
 import Service from './components/Service';
 import WorkInfo from './components/WorkInfo';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Service />
       <WorkInfo />
       <Contact />
+      <Footer />
     </>
   )
 }
