@@ -3,10 +3,12 @@
     display: flex;
     flex-direction: row;
 }
+
 .map_section{
     height: 100%;
     width: 50%;
 }
+
 .contact_section{
     height: 100%;
     width: 50%;
@@ -28,10 +30,6 @@
 
 .contact_form input:hover{
     border-bottom: 1px solid #fac564;
-}
-
-.contact_form input:blank{
-    border-bottom: 1px solid red;
 }
 
 .contact_form input::placeholder{
@@ -70,7 +68,7 @@
 }
 
 .contact_button:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     background: none;
     border: 1px solid #fac564;
     color: #fac564;
