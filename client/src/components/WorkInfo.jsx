@@ -58,7 +58,7 @@ const WorkInfo = () => {
   }, []);
   
   return (
-    <section className='workInfo' style={{backgroundPosition : `50% ${window.scrollY*0.9}px`}}>
+    <section className='workInfo' style={{backgroundPosition : `50% ${window.scrollY*1.1 - 3000}px`}}>
         <div className="overlay">
           <div className="workInfo_content" >
             <Fade bottom>
