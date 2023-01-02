@@ -5,7 +5,7 @@ import { FaAward } from 'react-icons/fa';
 import { IoMdPeople } from 'react-icons/io';
 import Fade from 'react-reveal/Fade';
 import { useSpring, animated } from 'react-spring';
-;
+
 
 const WorkInfo = () => {
   const info = [
@@ -14,7 +14,7 @@ const WorkInfo = () => {
     {"logo": IoMdPeople, "number": 10567, "title": "Happy Customer"},
     {"logo": GiCook, "number": 900, "title": "Staff"}
   ];
-
+  
   let items = [];
 
   const Number = ({n}) => {
@@ -34,7 +34,7 @@ const WorkInfo = () => {
             <data.logo className='icon_image_img'/>
         </div>
         <div className="icon_info">
-          <h1>
+          <h1 className='icon_info_h1'>
             <Number n={data.number} />
           </h1>
           <p>{data.title}</p>

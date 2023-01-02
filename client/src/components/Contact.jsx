@@ -10,7 +10,7 @@ const Contact = () => {
         <SimpleMap />
       </div>
       <div className="contact_section">
-        <Fade bottom>
+        <Fade top>
           <div className="contact_h1">
             <h1>Contact Us</h1>
           </div>    
