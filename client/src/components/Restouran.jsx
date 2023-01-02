@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Restouran.css';
-import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade';
 
 const Restouran = () => {
   return (

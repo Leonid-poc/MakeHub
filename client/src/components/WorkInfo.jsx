@@ -5,6 +5,7 @@ import { FaAward } from 'react-icons/fa';
 import { IoMdPeople } from 'react-icons/io';
 import Fade from 'react-reveal/Fade';
 import { useSpring, animated } from 'react-spring';
+;
 
 const WorkInfo = () => {
   const info = [
