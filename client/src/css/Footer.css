@@ -34,7 +34,7 @@
 
 .footer_about_info h1{
     color: #fff;
-    font-size: calc(var(--index)*1.1);
+    font-size: calc(var(--index)*.8);
     margin: 20px 10px;
     text-transform: uppercase;
     letter-spacing: 1.4px;
@@ -43,7 +43,7 @@
 
 .footer_about_info p{
     color: rgba(255, 255, 255, .7);
-    font-size: calc(var(--index)*0.79);
+    font-size: calc(var(--index)*0.6);
     line-height: 30px;
     margin: 10px;
     margin-right: 40px;
@@ -61,7 +61,7 @@
 
 .footer_services h1{
     color: #fff;
-    font-size: calc(var(--index)*1.1);
+    font-size: calc(var(--index)*.8);
     margin: 20px 10px 10px 10px;
     text-transform: uppercase;
     letter-spacing: 1.4px;
@@ -79,7 +79,7 @@
 .footer_services_links a{
     text-decoration: none;
     color: rgba(255, 255, 255, .7);
-    font-size: calc(var(--index)*0.8);
+    font-size: calc(var(--index)*.6);
     margin: 10px 0;
     transition: all .5s ease;
 }
@@ -96,7 +96,7 @@
 
 .footer_question h1{
     color: #fff;
-    font-size: calc(var(--index)*1.1);
+    font-size: calc(var(--index)*0.8);
     margin: 20px 10px 10px 10px;
     text-transform: uppercase;
     letter-spacing: 1.4px;
@@ -123,11 +123,11 @@
 .footer_question_p a{
     text-decoration: none;
     color: #ffffffb3;
-    font-size: calc(var(--index)*0.9);
+    font-size: calc(var(--index)*0.6);
 }
 
 .footer_question_p p{
-    font-size: calc(var(--index)*0.9);
+    font-size: calc(var(--index)*0.6);
     color: #ffffffb3;
 }
 
@@ -145,7 +145,7 @@
     font-family: 'Work Sans', sans-serif;
     text-align: center;
     font-weight: 400;
-    font-size: calc(var(--index)*0.85); 
+    font-size: calc(var(--index)*0.6); 
     letter-spacing: 1.5px;
     color: #ffffffb3;
 }
@@ -198,5 +198,12 @@
         flex-direction: column;
         height: 90%;
     }
-
+    .footer_question_p p,
+    .footer_question_p a,
+    .footer_container_bottom p,
+    .footer_services_links a,
+    .footer_about_info p {
+        font-size: calc(var(--index)*0.9)
+    }
 }
+
