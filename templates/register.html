@@ -5,14 +5,15 @@
 {%endblock%}
 
 {% block main %}
-<div class="error">{{ message }}</div>
+<div class="error --bs-danger-bg-subtle">{{ message }}</div>
 <form action='' method="post">
-    <div class="register-elem"><input name="name" type="text" placeholder="Введите имя"></div>
-    <div class="register-elem"><input name="surname" type="text" placeholder="Введите фамилию"></div>
-    <div class="register-elem"><input name="phone" type="tel" placeholder="Введите номер телефона"></div>
-    <div class="register-elem"><input name="email" type="email" placeholder="Введите почту"></div>
+    <div class="register-elem"><input value="{% if message %}{{ data['name'] }}{% endif %}" name="name" type="text" placeholder="Введите имя"></div>
+    <div class="register-elem"><input value="{% if message %}{{ data['surname'] }}{% endif %}" name="surname" type="text" placeholder="Введите фамилию"></div>
+    <div class="register-elem"><input value="{% if message %}{{ data['phone'] }}{% endif %}" name="phone" type="tel" placeholder="Введите номер телефона"></div>
+    <div class="register-elem"><input value="{% if message %}{{ data['email'] }}{% endif %}" name="email" type="email" placeholder="Введите почту"></div>
     <div class="register-elem"><input name="password" type="password" placeholder="Введите пароль"></div>
     <div class="register-elem"><input name="password_again" type="password" placeholder="Введите пароль повторно"></div>
     <button type="submit">Зарегестрироваться</button>
 </form>
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
 {%endblock%}
