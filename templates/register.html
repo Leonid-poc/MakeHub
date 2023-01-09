@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
 {% block title %}
-Зарегестрироваться
+Регистрация
 {%endblock%}
 
 {% block main %}
 <div class="error">{{ message }}</div>
 <form action='' method="post">
-    <input name="name" type="text" placeholder="Введите имя">
-    <input name="surname" type="text" placeholder="Введите фамилию">
-    <input name="phone" type="tel" placeholder="Введите номер телефона">
-    <input name="email" type="email" placeholder="Введите почту">
-    <input name="password" type="password" placeholder="Введите пароль">
-    <input name="password_again" type="password" placeholder="Введите пароль повторно">
+    <div class="register-elem"><input name="name" type="text" placeholder="Введите имя"></div>
+    <div class="register-elem"><input name="surname" type="text" placeholder="Введите фамилию"></div>
+    <div class="register-elem"><input name="phone" type="tel" placeholder="Введите номер телефона"></div>
+    <div class="register-elem"><input name="email" type="email" placeholder="Введите почту"></div>
+    <div class="register-elem"><input name="password" type="password" placeholder="Введите пароль"></div>
+    <div class="register-elem"><input name="password_again" type="password" placeholder="Введите пароль повторно"></div>
     <button type="submit">Зарегестрироваться</button>
 </form>
 {%endblock%}

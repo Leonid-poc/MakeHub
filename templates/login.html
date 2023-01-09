@@ -5,9 +5,14 @@
 {%endblock%}
 
 {% block main %}
+<div class="error">{{ message }}</div>
 <form action='' method="post">
-    <input type="email" placeholder="Введите почту">
-    <input type="password" placeholder="Введите пароль">
+    <div class="elem-login"><input type="email" name="email" placeholder="Введите почту"></div>
+    <div class="elem-login"><input type="password" name="password" placeholder="Введите пароль"></div>
+    <div class="rem elem-login">
+        <input type="checkbox" name="remember" placeholder="Запомнить меня">
+        Запомнить меня
+    </div>
     <button type="submit">Войти</button>
 </form>
 {%endblock%}
