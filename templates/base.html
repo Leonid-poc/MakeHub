@@ -11,13 +11,17 @@
 </head>
 <body>
     <!-- Тут писать навбар сайта!!! -->
-    <div id="root">
-        {% if not current_user.is_active %}
-        <a href="login.html">Войти</a>
-        <a href="register.html">Зарегестрироваться</a>
-        {% else %}
-        <a href="logout.html">Выйти</a>
-        {% endif %}
+    <div class="navbar">
+        <ul class="container-fluid text-center">
+            <div class="nav col-10"></div>
+            {% if not current_user.is_active %}
+            <li class="col-1"><a href="login.html">Войти</a></li>
+            <li class="col-1"><a href="register.html">Зарегестрироваться</a></li>
+            {% else %}
+            <li class="col-2"><a href="logout.html">Выйти</a></li>
+            {% endif %}
+        </ul>
+        
     </div>
     {% block main %}{% endblock %} <!-- Тут ничего не писать это часть джинджи -->
     <!-- Тут писать футер сайта -->

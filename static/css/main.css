@@ -1,9 +1,40 @@
+:root {
+    --index: calc(1vw + 1vh);
+}
+
 .root {
-    position: absolute;
+    position: fixed;
+    display: flex;
     background-color: #1A1A1D;
     height: 100%;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
-.error {
-    color:red;
+.navbar > ul > li {
+    list-style-type: none;
+    float: left;
+}
+
+.form-auth {
+    width: 25vw;
+}
+
+.form-auth > form {
+    margin-top: 10%;
+    padding: 20%;
+    color: #C3073F;
+    background-color: transparent;
+    border-radius: 2vw;
+    border: 3px #C3073F solid;
+    box-shadow: 0 0 5vw #6F2232, inset 0 0 3vw #6F2232;
+}
+
+.form-auth > .error {
+    padding: 10%;
+    color: #FFDA6A;
+    background-color: #332701;
+    border-radius: 2vw;
+    border: 3px #664D03 solid;
+    box-shadow: 0 0 2vw #705402;
 }
