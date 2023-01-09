@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pizza.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'filesystem'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 db = SQLAlchemy(app)
 
@@ -52,16 +53,15 @@ def login():
         db_session = db.session
         email = request.form['email']
         password = request.form['password']
-        remember = request.form['remember']
+        remember = 'remember' in request.form.keys()
 
         user = db_session.query(User).filter(email == User.email).all()
         if not user:
-            return render_template('login.html', message='Пользователя с такой почтой не существует')
+            return render_template('login.html', message='Пользователя с такой почтой не существует', email=email)
         user = user[0]
         if not check_password_hash(user.password, password):
-            return render_template('login.html', message='Неверный пароль, Попробуйте ещё раз')
+            return render_template('login.html', message='Неверный пароль, Попробуйте ещё раз', email=email)
         login_user(user, remember=remember)
-        print(current_user)
         return redirect('/')
 
 @app.route('/logout')
@@ -81,10 +81,13 @@ def register():
         phone = request.form.get('phone')
         email = request.form.get('email')
         password = request.form.get('password')
+        data = {'name': name, 'surname': surname, 'phone': phone, 'email': email}
         if db.session.query(User).filter(email == User.email).first():
-            return render_template('register.html', message='Пользователь с такой почтой уже существует')
+            return render_template('register.html', message='Пользователь с такой почтой уже существует', data=data)
         elif db.session.query(User).filter(phone == User.phone).first():
-            return render_template('register.html', message='Пользователь с таким номером телефона уже существует')
+            return render_template('register.html', message='Пользователь с таким номером телефона уже существует', data=data)
+        elif not email:
+            return render_template('register.html', message='Заполните поля', data=data)
         new_user = User(name=name, surname=surname, phone=phone, email=email, password=generate_password_hash(password))
         db_session.add(new_user)
         db_session.commit()
