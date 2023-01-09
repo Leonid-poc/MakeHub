@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import current_user, login_user, logout_user, LoginManager, login_required
+from flask_login import current_user, login_user, logout_user, LoginManager, login_required, UserMixin
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,7 +12,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 db = SQLAlchemy(app)
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     is_active = True
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
@@ -62,11 +62,13 @@ def login():
         if not check_password_hash(user.password, password):
             return render_template('login.html', message='Неверный пароль, Попробуйте ещё раз', email=email)
         login_user(user, remember=remember)
+        current_user.is_active = True
         return redirect('/')
 
-@app.route('/logout')
+@app.route('/logout.html')
 @login_required
 def logout():
+    current_user.is_active = False
     logout_user()
     return redirect("/")
 
@@ -91,6 +93,8 @@ def register():
         new_user = User(name=name, surname=surname, phone=phone, email=email, password=generate_password_hash(password))
         db_session.add(new_user)
         db_session.commit()
+        login_user(new_user, remember=False)
+        current_user.is_active = True
         return redirect('/')
 
 if __name__ == '__main__':
