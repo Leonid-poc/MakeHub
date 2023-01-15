@@ -2,6 +2,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import current_user, login_user, logout_user, LoginManager, login_required, UserMixin
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from settings import *
 
 app = Flask(__name__)
 
@@ -90,6 +91,8 @@ def register():
             return render_template('register.html', message='Пользователь с таким номером телефона уже существует', data=data)
         elif not email:
             return render_template('register.html', message='Заполните поля', data=data)
+        elif not phone_proof(phone=phone):
+            return render_template('register.html', message='Такого номера телефона не существует', data=data)
         new_user = User(name=name, surname=surname, phone=phone, email=email, password=generate_password_hash(password))
         db_session.add(new_user)
         db_session.commit()
