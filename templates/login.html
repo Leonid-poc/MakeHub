@@ -11,13 +11,15 @@
         <div class="error bs-danger-bg-subtle">{{ message }}</div>
         {% endif %}
         <form action='' method="post">
-            <div class="elem-login"><input type="email" name="email" placeholder="Введите почту" value="{{ email }}"></div>
-            <div class="elem-login"><input type="password" name="password" placeholder="Введите пароль"></div>
+            <h1 class="auth-logo">Вход</h1>
+            <div class="elem-login auth-elem"><input type="email" name="email" placeholder="Введите почту" value="{{ email }}"></div>
+            <div class="elem-login auth-elem"><input type="password" name="password" placeholder="Введите пароль"></div>
             <div class="remember elem-login">
                 <input type="checkbox" name="remember" placeholder="Запомнить меня">
                 Запомнить меня
             </div>
-            <button type="submit">Войти</button>
+            <button class='auth-elem auth-submit' type="submit">Войти</button>
+            <h5 class="auth-logo">Нет аккаунта? <a href="register.html" style="text-decoration: none">Зарегестрируйтесь</a></h5>
         </form>
     </div>
 </div>
