@@ -98,4 +98,4 @@ def register():
         return redirect('/')
 
 if __name__ == '__main__':
-    app.run('localhost', 5000, debug=True)
+    app.run(host='localhost', port=8000)
